@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>425 Yes Early No</title>
+    <style type="text/css">
+        body {
+            background-size: 100%;
+            background-attachment: fixed;
+            padding: 12;
+        }
+
+        .box {
+            width: 1000px;
+            margin: 0px auto;
+            background: lightgreen;
+            opacity: 0.8;
+        }
+
+        .box2 {
+            width: 800px;
+            margin: 0px auto;
+            line-height: 2em;
+        }
+
+        .countdown {
+            line-height: 1.5;
+            font-size: 40px;
+            background-color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box2">
+            <br>
+            <h1>425 Yes Early No</h1>
+            <h2>过了四级绝不早自习</h2>
+            <b>————————————————————————</b>
+            <h3>为了不上早自习，到四级前最后一次早自习结束，还需要坚持</h3>
+            <b class="countdown" id="cd">正在计算…(请确保启用JS)</b><br><br>
+            <b>————————————————————————</b>
+            <h1>关于</h1>
+            <b>
+                Q：为什么蓝熊盼望2022年12月的英语四级？<br>
+                A：因为据说过了四级就不用上早七且要签到的早自习了<br><br>
+
+                Q：为什么蓝熊排斥早七早自习？<br>
+                A：因为蓝熊常常要解大手，特别是早上，早七早自习就剥夺了蓝熊的上大手和早餐时间。<br><br>
+
+                Q：蓝熊能保证2022年12月四级一定能过吗？<br>
+                A：蓝熊英语成绩尚可，高考英语131分。<br>
+                只要注意听力时小心冷静、注意听力要<i>边做边涂</i>，因为听完了马上收卷<br>
+                还是有大概率能过2022年12月的四级的。<br>
+                特设立此页面，来告诉自己——
+                <h2>“你更需要睡眠和解大手，别让早七早自习夺走了你的身体健康。”</h2>
+                <br>
+            </b>
+
+        </div>
+    </div>
+
+    <script>
+        let end = 1670542800000;
+        setInterval(() => {
+            let a = new Date();
+            let diff = parseInt((end - a.getTime()) / 1000);
+            //console.log(diff);
+            if (diff > 0) {
+                let day = parseInt(diff / 86400);
+                let hour = parseInt(diff / 3600) - 24 * day;
+                let minute = parseInt(diff / 60) - 24 * 60 * day - 60 * hour;
+                let second = parseInt(diff) - 24 * 3600 * day - 3600 * hour - 60 * minute;
+                let cd = day + ' 天 ' + hour + ' 时 ' + minute + ' 分 ' + second + ' 秒 ';
+                document.getElementById('cd').innerHTML = cd;
+            }
+            else {
+                document.getElementById('cd').innerHTML = '你已经熬过大学所有早自习了！';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
