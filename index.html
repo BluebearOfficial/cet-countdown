@@ -75,8 +75,13 @@
                 let hour = parseInt(diff / 3600) - 30 * 24 * month - 24 * day;
                 let minute = parseInt(diff / 60) - 30 * 24 * 60 * month- 24 * 60 * day - 60 * hour;
                 let second = parseInt(diff) - 30 * 24 * 3600 * month - 24 * 3600 * day - 3600 * hour - 60 * minute;
+                let seconds = parseInt(diff)
                 let cd = month + ' 个月 ' + day + ' 天 ' + hour + ' 时 ' + minute + ' 分 ' + second + ' 秒 ';
+                let cds = ' 或者 ' + seconds + ' 秒 ';
                 document.getElementById('cd').innerHTML = cd;
+                <br>
+                document.getElementById('cds').innerHTML = cds;
+                
             }
             else {
                 document.getElementById('cd').innerHTML = '你已经熬过大学所有早自习了！';
