@@ -73,10 +73,11 @@
                 let month = parseInt(diff / 2592000);
                 let day = parseInt(diff / 86400) - 30 * month;
                 let hour = parseInt(diff / 3600) - 30 * 24 * month - 24 * day;
+                let hours = parseInt(diff / 3600);
                 let minute = parseInt(diff / 60) - 30 * 24 * 60 * month- 24 * 60 * day - 60 * hour;
                 let second = parseInt(diff) - 30 * 24 * 3600 * month - 24 * 3600 * day - 3600 * hour - 60 * minute;
                 let seconds = parseInt(diff)
-                let cd = month + ' 个月 ' + day + ' 天 ' + hour + ' 时 ' + minute + ' 分 ' + second + ' 秒 ' + ' 或者 ' + seconds + ' 秒 ';
+                let cd = month + ' 个月 ' + day + ' 天 ' + hour + ' 时 ' + minute + ' 分 ' + second + ' 秒 ' + ' 或者 ' + seconds + ' 秒 ' + ' 或 ' + hours + ' 个小时 ';
                 document.getElementById('cd').innerHTML = cd;
           
                 
